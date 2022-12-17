@@ -1,0 +1,32 @@
+Generating report for minidump
+
+Application version 5.0.3.0
+ ... built from changelist 20979098
+
+OS version Linux 5.15.0-56-generic (network name: Labtaup-Peci)
+Running 6 x86_64 processors (12 logical cores)
+Exception was "Ensure condition failed: IsPackageExternal() [File:Runtime/Engine/Classes/GameFramework/Actor.h] [Line: 2228]"
+
+<SOURCE START>
+<SOURCE END>
+
+<CALLSTACK START>
+libUnrealEditor-Engine.so!UWorldPartitionRuntimeHash::OnEndPlay() [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Engine/Private/WorldPartition/WorldPartitionRuntimeHash.cpp:32]
+libUnrealEditor-Engine.so!UWorldPartition::OnEndPlay() [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Engine/Private/WorldPartition/WorldPartition.cpp:346]
+libUnrealEditor-Engine.so!TBaseUObjectMethodDelegateInstance<false, UWorldPartition, void (), FDefaultDelegateUserPolicy>::ExecuteIfSafe() const [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/Core/Public/Delegates/DelegateInstancesImpl.h:609]
+libUnrealEditor-UnrealEd.so!TMulticastDelegate<void (), FDefaultDelegateUserPolicy>::Broadcast() const [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/Core/Public/Delegates/DelegateSignatureImpl.inl:967]
+libUnrealEditor-UnrealEd.so!UEditorEngine::EndPlayMap() [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/UnrealEd/Private/PlayLevel.cpp:332]
+libUnrealEditor-UnrealEd.so!UEditorEngine::Tick(float, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/UnrealEd/Private/EditorEngine.cpp:2094]
+libUnrealEditor-UnrealEd.so!UUnrealEdEngine::Tick(float, bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/UnrealEd/Private/UnrealEdEngine.cpp:471]
+UnrealEditor!FEngineLoop::Tick() [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Launch/Private/LaunchEngineLoop.cpp:5209]
+UnrealEditor!GuardedMain(char16_t const*) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Launch/Private/Launch.cpp:185]
+libUnrealEditor-UnixCommonStartup.so!CommonUnixMain(int, char**, int (*)(char16_t const*), void (*)()) [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/Unix/UnixCommonStartup/Private/UnixCommonStartup.cpp:264]
+libc.so.6!UnknownFunction(0x29d8f)
+libc.so.6!__libc_start_main(+0x7f)
+UnrealEditor!_start()
+
+<CALLSTACK END>
+
+0 loaded modules
+
+Report end!
